@@ -1,0 +1,12 @@
+<%= form_for(user, class: "user", # params nested within :user for secure_params
+                   url:   login_path, # give url to invokes when path and model differ
+                   local: true, id: "login-form") do |form|  %>
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
